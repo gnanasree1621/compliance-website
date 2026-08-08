@@ -1,1668 +1,305 @@
-/* ================= RESET ================= */
+<!DOCTYPE html>
+<html lang="en">
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+<head>
 
-body{
-  font-family:'Roboto', sans-serif;
-  background:#ffffff;
-  overflow-x:hidden;
-  color:#111;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Compliance Website</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 
-img{
-  max-width:100%;
-  display:block;
-}
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
 
-a{
-  text-decoration:none;
-}
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
-/* ================= COMMON ================= */
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
 
-.navbar,
-.hero,
-.about{
-  max-width:1440px;
-  margin:auto;
-}
+</head>
 
-/* ================= NAVBAR ================= */
+<body>
 
-.navbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+  <!-- ================= NAVBAR ================= -->
 
-  max-width:1440px;
-  height:100px;
+  <nav class="navbar">
 
-  margin:auto;
-  padding:0 100px;
-}
+    <!-- Logo -->
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo">
+    </div>
 
-.logo img{
-  width:145px;
-  display:block;
-}
+    <!-- Mobile Menu Icon -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- Nav Links -->
+    <ul class="nav-links">
+
+      <li>
+        <a href="#">
+        
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          About Us
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+
+        Our Services
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
 
-.nav-links{
-  display:flex;
-  align-items:center;
-  list-style:none;
+          Pricing
+        </a>
+      </li>
 
-  gap:48px;
+      <li>
+        <a href="#">
 
-  margin-left:auto;
-  margin-right:auto;
-  padding:0 100px;
-}
+          FAQ
+        </a>
+      </li>
 
-.nav-links a{
-  color:#111;
+      <li>
+        <a href="#">
+          Contact
+        </a>
+      </li>
 
-  font-family:'Roboto', sans-serif;
-  font-size:17px;
-  font-weight:500;
+<!-- Mobile Contact Button -->
+<li>
+    <button class="contact-btn mobile-btn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 16.92V19.92C22 20.52 21.5 21 20.9 21C10.4 21 3 13.6 3 3.1C3 2.5 3.48 2 4.08 2H7.08C7.58 2 8.02 2.36 8.12 2.85L9 7.13C9.1 7.62 8.9 8.13 8.48 8.42L6.5 9.82C7.56 12.12 9.88 14.44 12.18 15.5L13.58 13.52C13.87 13.1 14.38 12.9 14.87 13L19.15 13.88C19.64 13.98 20 14.42 20 14.92V16.92" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Contact Us
+</button>
+</li>
 
-  transition:0.3s;
-}
+</ul>
 
-.nav-links a:hover{
-  color:#4C5DF4;
-}
+<!-- Desktop Contact Button -->
+<button class="contact-btn desktop-btn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 16.92V19.92C22 20.52 21.5 21 20.9 21C10.4 21 3 13.6 3 3.1C3 2.5 3.48 2 4.08 2H7.08C7.58 2 8.02 2.36 8.12 2.85L9 7.13C9.1 7.62 8.9 8.13 8.48 8.42L6.5 9.82C7.56 12.12 9.88 14.44 12.18 15.5L13.58 13.52C13.87 13.1 14.38 12.9 14.87 13L19.15 13.88C19.64 13.98 20 14.42 20 14.92V16.92" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Contact Us
+</button>
 
-.contact-btn{
-  width:162px;
-  height:46px;
+  </nav>
 
-  border:none;
-  border-radius:10px;
+  <!-- ================= HERO SECTION ================= -->
 
-  background:#4C5DF4;
-  color:#fff;
+  <section class="hero">
 
-  font-family:'Roboto', sans-serif;
-  font-size:18px;
-  font-weight:500;
+    <div class="hero-left">
 
-  cursor:pointer;
+      <h1>
+        Simplifying<br>
+        <span>Compliance</span>
+        For Research Analysts
+      </h1>
 
-  transition:0.3s;
-}
+      <p><b>
+  Stay Focused On Your Insights—We’ll Handle The Compliance. Our Expert</b>
+  <br><b>
+  Solutions Ensure Your Research Practices Meet Every Regulatory</b>
+  <br><b>
+  Requirement With Confidence And Ease</b>
+</p>
 
-.contact-btn:hover{
-  opacity:0.9;
-}
+   <div class="hero-points">
 
-.menu-toggle{
-  display:none;
-  font-size:30px;
-  cursor:pointer;
-}
+  <p>
+    <span class="tick-icon">
+      <span class="tick-mark">✓</span>
+    </span>
+    End-To-End Compliance Support
+  </p>
 
-.mobile-btn{
-  display:none;
-}
+  <p>
+    <span class="tick-icon">
+      <span class="tick-mark">✓</span>
+    </span>
+    Regulatory Filings Made Simple
+  </p>
 
-/* ================= HERO SECTION ================= */
+  <p>
+    <span class="tick-icon">
+      <span class="tick-mark">✓</span>
+    </span>
+    Tailored Solutions For Independent Analysts & Firms
+  </p>
 
-.hero{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+</div>
+      <div class="hero-buttons">
 
-  max-width:1440px;
+        <button class="start-btn">
+          Get Started
+        </button>
 
-  margin:auto;
+        <button class="consult-btn">
+          Book A Consultation
+        </button>
 
-  gap:10px;
-  margin-top: 46px;
-  padding:20px 80px 40px;
-}
+      </div>
 
-/* ================= HERO LEFT ================= */
+    </div>
 
-.hero-left{
-  width:690px;
+    <div class="hero-right">
 
-  display:flex;
-  flex-direction:column;
+      <img src="images/hero-image.png" alt="Hero Image">
 
-  gap:26px;
-}
+    </div>
 
-.hero-left h1{
-  width:690px;
+  </section>
 
-  font-family:'Roboto', sans-serif;
-  font-size:64px;
-  font-weight:700;
+  <!-- ================= ABOUT SECTION ================= -->
 
-  line-height:85px;
+  <section class="about">
 
-  letter-spacing:-1px;
+    <div class="about-left">
 
-  color:#000;
+  <div class="about-heading">
 
-  margin:0;
-}
+  <h2>
+    Why <span>Compliance Matters</span><br>
+    For Research Analysts
+  </h2>
 
-.hero-left span{
-  color:#4C5DF4;
-}
+  <img src="images/arrow-down.png" alt="" class="about-arrow">
 
-.hero-left p{
-  width:690px;
+</div>
 
-  font-family:'Roboto', sans-serif;
-  font-size:18px;
-  font-weight:400;
+  <!-- CHART IMAGE -->
+  <div class="chart-wrapper">
 
-  line-height:32px;
+    <!-- Chart Image -->
+    <img class="chart-image" src="images/chart.png" alt="Chart">
 
-  color:#333;
+    <!-- Vector 1 - Bottom Left -->
+    <img class="chart-vector-1" src="images/Vector1.png" alt="">
 
-  margin:0;
-}
+    <!-- Vector 2 - Top Right -->
+    <img class="chart-vector-2" src="images/Vector2.png" alt="">
 
-/* ================= HERO POINTS ================= */
+</div>
 
-.hero-points{
-  display:flex;
-  flex-direction:column;
+  <!-- BOTTOM ARROWS -->
+  <img src="images/arrow-side.png" alt="" class="bottom-arrows">
 
-  gap:6px;
-}
+</div>
 
-.hero-points p{
-  display:flex;
-  align-items:center;
+    <div class="about-right">
 
-  gap:12px;
+      <p><b>
+         In Today’s Regulatory Environment, Even A Small Oversight Can Lead To
+  Penalties, Reputational Risks, And Loss Of Client Trust. We Help Research
+  Analysts And Firms Navigate Complex Compliance Requirements So They
+  Can Focus On Delivering High-Quality Research Without Worry.</b>
+      </p>
 
-  margin:0;
+     <!-- Card 1 -->
+<div class="card">
 
-  font-family:'Roboto', sans-serif;
-  font-size:18px;
-  font-weight:400;
+    <div class="card-icon">
+        <img src="images/Regulatory Clarity (1).png"
+             alt="Regulatory Clarity">
+    </div>
 
-  line-height:32px;
-}
+    <div class="card-content">
+        <h3>Regulatory Clarity</h3>
 
-.tick-icon{
-  width:20px;
-  height:20px;
+        <p>
+            We Decode Complex Compliance Rules Into Simple,
+            Actionable Steps.
+        </p>
+    </div>
 
-  border-radius:50%;
-  background:#4C5DF4;
+</div>
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
 
-  flex-shrink:0;
-}
+<!-- Card 2 -->
+<div class="card">
 
-.tick-mark{
-  color:#fff !important;
+    <div class="card-icon">
+        <img src="images/Hassle-Free Filings Clarity.png"
+             alt="Hassle-Free Filings Clarity">
+    </div>
 
-  font-size:12px;
-  font-weight:700;
+    <div class="card-content">
+        <h3>Hassle-Free Filings Clarity</h3>
 
-  line-height:1;
-}
+        <p>
+            From Registration To Ongoing Reporting —
+            We Manage It End-To-End.
+        </p>
+    </div>
 
-/* ================= BUTTONS ================= */
+</div>
 
-.hero-buttons{
-  display:flex;
-  gap:18px;
 
-  margin-top:10px;
-}
+<!-- Card 3 -->
+<div class="card">
 
-.start-btn,
-.consult-btn{
-  width:210px;
-  height:50px;
+    <div class="card-icon">
+        <img src="images/Risk Protection.png"
+             alt="Risk Protection">
+    </div>
 
-  border-radius:8px;
+    <div class="card-content">
+        <h3>Risk Protection</h3>
 
-  font-family:'Roboto', sans-serif;
-  font-size:18px;
-  font-weight:500;
+        <p>
+            Stay Ahead Of Audits, Inspections,
+            And Compliance Gaps With Proactive Support.
+        </p>
+    </div>
 
-  cursor:pointer;
+</div>
 
-  transition:0.3s;
-}
+      </div>
 
-.start-btn{
-  border:none;
+    </div>
 
-  background:#4C5DF4;
-  color:#fff;
-}
+  </section>
 
-.consult-btn{
-  border:2px solid #4C5DF4;
+  <!-- ================= JAVASCRIPT ================= -->
 
-  background:transparent;
-  color:#4C5DF4;
-}
+  <script>
 
-.consult-btn:hover{
-  background:#4C5DF4;
-  color:#fff;
-}
+    const menuToggle = document.getElementById("menu-toggle");
 
-/* ================= HERO RIGHT ================= */
+    const navLinks = document.querySelector(".nav-links");
 
-.hero-right{
-  width:739px;
-  height:607px;
+    menuToggle.addEventListener("click", () => {
 
-  position:relative;
+      navLinks.classList.toggle("active");
 
-  display:flex;
-  justify-content:center;
-  align-items:center;
+    });
 
-  flex-shrink:0;
-  margin-top: -26px;
-  margin-left:-90px;
-}
-.hero-right img{
-  width:100%;
-  height:100%;
+  </script>
 
-  object-fit:contain;
+</body>
 
-  display:block;
-
-  margin:0;
-}
-
-/* ================= BACKGROUND SHAPE ================= */
-
-.hero-bg{
-  position:absolute;
-
-  width:620px;
-  height:430px;
-
-  background:#F1F1FD;
-
-  border-radius:45% 35% 40% 35%;
-
-  z-index:1;
-
-  top:110px;
-}
-
-/* ================= MAIN HERO IMAGE ================= */
-
-.main-hero-img{
-  position:relative;
-
-  z-index:2;
-
-  width:100%;
-  max-width:420px;
-
-  top:35px;
-}
-
-/* ================= ARROW DESIGN ================= */
-
-.arrow-design{
-  position:absolute;
-
-  top:10px;
-  left:20px;
-
-  font-size:52px;
-
-  color:#E1E3FF;
-
-  letter-spacing:-8px;
-
-  font-weight:700;
-
-  z-index:3;
-}
-
-/* ================= RATING CARD ================= */
-
-.rating-card{
-  position:absolute;
-
-  top:170px;
-  right:35px;
-
-  background:#fff;
-
-  padding:18px 26px;
-
-  border-radius:16px;
-
-  box-shadow:0 6px 20px rgba(0,0,0,0.06);
-
-  z-index:4;
-}
-
-.rating-card h3{
-  font-size:34px;
-  color:#4C5DF4;
-
-  margin-bottom:4px;
-}
-
-.rating-card p{
-  font-size:15px;
-  color:#222;
-
-  font-weight:500;
-}
-
-/* ================= TRUSTED CARD ================= */
-
-.trusted-card{
-  position:absolute;
-
-  left:40px;
-  bottom:120px;
-
-  background:#fff;
-
-  padding:18px 26px;
-
-  border-radius:16px;
-
-  box-shadow:0 6px 20px rgba(0,0,0,0.06);
-
-  z-index:4;
-
-  text-align:center;
-}
-
-.trusted-card h4{
-  font-size:14px;
-  color:#555;
-}
-
-.trusted-card h2{
-  font-size:42px;
-  color:#4C5DF4;
-
-  line-height:1.1;
-}
-
-.trusted-card p{
-  font-size:15px;
-  color:#222;
-}
-
-/* ================= SUITCASE ================= */
-
-.suitcase{
-  position:absolute;
-
-  right:40px;
-  bottom:30px;
-
-  font-size:58px;
-
-  opacity:0.25;
-}
-
-/* ================= ABOUT SECTION ================= */
-.about{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-
-  max-width:1440px;
-
-  margin:auto;
-
-  gap:20px;
-
-  padding:40px 60px 80px;
-}
-
-.about-left{
-  width:620px;
-
-  position:relative;
-}
-.about-heading{
-  position:relative;
-
-  display:block;
-
-  margin-left:0;
-
-  word-spacing:0;
-}
-
-.about-arrow{
-  position:absolute;
-
-  right:30px;
-  top:120px;
-
-  width:28px;
-
-  opacity:0.9;
-}
-.chart-image{
-  width:100%;
-  max-width:620px;
-
-  margin-top:10px;
-}
-
-.bottom-arrows{
-  position:absolute;
-
-  left:-70px;
-  bottom:-10px;
-
-  width:120px;
-
-  opacity:0.9;
-}
-
-.about-left h2{
-  width:620px;
-
-  font-family:'Roboto', sans-serif;
-  font-size:48px;
-  font-weight:700;
-
-  line-height:70px;
-
-  color:#111;
-
-  margin-bottom:20px;
-}
-.about-left span{
-  color:#4C5DF4;
-}
-
-.about-right{
-  width:640px;
-
-  padding-top:0;
-
-  margin-left:-20px;
-}
-
-.about-right > p{
-  width:600px;
-
-  font-family:'Roboto', sans-serif;
-  font-size:18px;
-  font-weight:400;
-
-  line-height:32px;
-
-  color:#333;
-
-  margin-bottom:100px;
-}
-/* ================= CARDS ================= */
-.card-icon {
-    width: 52px;
-    height: 52px;
-    min-width: 52px;
-
-    border-radius: 14px;
-    background: #EEF1FF;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-icon img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-}
-.card:hover{
-  border-color:#D9DDFE;
-
-  transform:translateY(-2px);
-}
-
-.card-icon{
-  width:10px;
-  height:52px;
-  min-width:52px;
-
-  border-radius:14px;
-
-  background:#EEF1FF;
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
-  font-size:22px;
-
-  color:#4C5DF4;
-}
-
-.card-content{
-  flex:1;
-
-  width:100%;
-}
-.card-content p{
-  font-size:16px;
-  line-height:42px;
-
-  color:#555;
-
-  margin:0;
-}
-.card-blue-icon{
-  color:#4C5DF4;
-}
-/* ================= TABLET ================= */
-
-@media(max-width:992px){
-
-  .navbar{
-    height:90px;
-    padding:0 30px;
-  }
-
-  .desktop-btn{
-    display:none;
-  }
-
-  .menu-toggle{
-    display:block;
-    font-size:28px;
-    color:#111;
-  }
-
-  .nav-links{
-    position:fixed;
-
-    top:0;
-    right:-100%;
-
-    width:280px;
-    height:100vh;
-
-    background:#fff;
-
-    flex-direction:column;
-    align-items:flex-start;
-
-    padding:30px 24px;
-
-    gap:34px;
-
-    z-index:9999;
-
-    transition:0.4s ease;
-  }
-
-  .nav-links.active{
-    right:0;
-  }
-
-  .mobile-btn{
-    display:block;
-    margin-top:10px;
-  }
-
-  .hero{
-    flex-direction:column;
-
-    align-items:center;
-    text-align:center;
-
-    padding:40px 30px 60px;
-
-    gap:30px;
-  }
-
-  .hero-left{
-    width:100%;
-    max-width:700px;
-
-    align-items:center;
-  }
-
-  .hero-left h1{
-    width:100%;
-
-    font-size:54px;
-    line-height:75px;
-  }
-
-  .hero-left p{
-    width:100%;
-    max-width:650px;
-
-    font-size:18px;
-    line-height:32px;
-  }
-
-  .hero-points{
-    width:100%;
-    align-items:center;
-  }
-
-  .hero-points p{
-    width:fit-content;
-  }
-
-  .hero-buttons{
-    justify-content:center;
-  }
-
-  .hero-right{
-    width:100%;
-    max-width:650px;
-
-    height:auto;
-
-    margin-left:0;
-    margin-top:0;
-  }
-
-  .hero-right img{
-    width:100%;
-    height:auto;
-  }
-
-  .about{
-    flex-direction:column;
-
-    gap:50px;
-
-    padding:60px 30px;
-  }
-
-  .about-left,
-  .about-right{
-    width:100%;
-  }
-
-  .about-left h2{
-    width:100%;
-
-    font-size:54px;
-    line-height:75px;
-
-    text-align:center;
-  }
-
-  .about-right > p{
-    width:100%;
-
-    max-width:100%;
-
-    text-align:center;
-  }
-
-  .card{
-    width:100%;
-  }
-
-  .about-arrow,
-  .bottom-arrows{
-    display:none;
-  }
-}
-
-
-/* ================= MOBILE ================= */
-
-@media(max-width:576px){
-
-  .navbar{
-    height:80px;
-    padding:0 20px;
-  }
-
-  .logo img{
-    width:110px;
-  }
-
-  .desktop-btn{
-    display:none;
-  }
-
-  .menu-toggle{
-    display:block;
-
-    font-size:24px;
-    color:#111;
-  }
-
-  .nav-links{
-    position:fixed;
-
-    top:0;
-    right:-100%;
-
-    width:280px;
-    height:100vh;
-
-    background:#fff;
-
-    flex-direction:column;
-    align-items:flex-start;
-
-    padding:24px 20px;
-
-    gap:30px;
-
-    z-index:9999;
-
-    transition:0.4s ease;
-  }
-
-  .nav-links.active{
-    right:0;
-  }
-
-  .mobile-btn{
-    display:block;
-    margin-top:10px;
-  }
-
-  .hero{
-    flex-direction:column;
-
-    align-items:center;
-    text-align:center;
-
-    padding:20px 20px 50px;
-
-    gap:18px;
-  }
-
-  .hero-left{
-    width:100%;
-
-    gap:18px;
-
-    align-items:center;
-  }
-
-  .hero-left h1{
-    width:100%;
-
-    font-size:38px;
-    line-height:48px;
-
-    letter-spacing:0;
-  }
-
-  .hero-left p{
-    width:100%;
-
-    font-size:16px;
-    line-height:32px;
-  }
-
-  .hero-points{
-    width:100%;
-
-    align-items:flex-start;
-  }
-
-  .hero-points p{
-    font-size:15px;
-    line-height:30px;
-  }
-
-  .hero-buttons{
-    width:100%;
-
-    flex-direction:column;
-
-    gap:12px;
-  }
-
-  .start-btn,
-  .consult-btn{
-    width:100%;
-    height:52px;
-
-    font-size:16px;
-  }
-
-  .hero-right{
-    width:100%;
-    height:auto;
-
-    margin-left:0;
-    margin-top:10px;
-  }
-
-  .hero-right img{
-    width:100%;
-    height:auto;
-  }
-
-  .about{
-    flex-direction:column;
-
-    gap:40px;
-
-    padding:50px 20px;
-  }
-
-  .about-left,
-  .about-right{
-    width:100%;
-  }
-
-  .about-left h2{
-    width:100%;
-
-    font-size:34px;
-    line-height:48px;
-
-    text-align:center;
-  }
-
-  .about-right > p{
-    width:100%;
-
-    font-size:16px;
-    line-height:30px;
-
-    text-align:center;
-  }
-
-  .card{
-    width:100%;
-
-    min-height:auto;
-
-    padding:20px;
-
-    gap:14px;
-  }
-
-  .card-content h3{
-    font-size:18px;
-  }
-
-  .card-content p{
-    font-size:15px;
-    line-height:30px;
-  }
-
-  .chart-image{
-    max-width:100%;
-  }
-
-  .about-arrow,
-  .bottom-arrows{
-    display:none;
-  }
-}
-/* ================= TABLET ================= */
-
-@media(max-width:992px){
-
-  .navbar{
-    height:90px;
-    padding:0 30px;
-    position:relative;
-    z-index:1000;
-  }
-
-  .desktop-btn{
-    display:none;
-  }
-
-  .menu-toggle{
-    display:block;
-    font-size:28px;
-    color:#111;
-    cursor:pointer;
-    z-index:10001;
-  }
-
-  /* ===== SIDEBAR MENU ===== */
-
-  .nav-links{
-    position:fixed;
-
-    top:0;
-    right:-100%;
-
-    width:280px;
-    height:100vh;
-
-    background:#fff;
-
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-
-    padding:30px 24px;
-
-    gap:34px;
-
-    z-index:9999;
-
-    transition:0.4s ease;
-
-    box-shadow:-5px 0 20px rgba(0,0,0,0.08);
-  }
-
-  .nav-links.active{
-    right:0;
-  }
-
-  .nav-links li{
-    width:100%;
-  }
-
-  .nav-links a{
-    display:flex;
-    align-items:center;
-
-    gap:12px;
-
-    font-size:16px;
-    font-weight:500;
-  }
-
-  .mobile-btn{
-    display:block;
-
-    width:100%;
-    height:50px;
-
-    border:none;
-    border-radius:8px;
-
-    background:#4C5DF4;
-    color:#fff;
-
-    font-size:16px;
-    font-weight:500;
-
-    margin-top:10px;
-  }
-
-  /* ===== HERO ===== */
-
-  .hero{
-    flex-direction:column;
-
-    align-items:center;
-    text-align:center;
-
-    padding:40px 30px 60px;
-
-    gap:30px;
-  }
-
-  .hero-left{
-    width:100%;
-    max-width:700px;
-
-    align-items:center;
-  }
-
-  .hero-left h1{
-    width:100%;
-
-    font-size:54px;
-    line-height:75px;
-  }
-
-  .hero-left p{
-    width:100%;
-    max-width:650px;
-
-    font-size:18px;
-    line-height:32px;
-  }
-
-  .hero-points{
-    width:100%;
-    align-items:center;
-  }
-
-  .hero-points p{
-    width:fit-content;
-  }
-
-  .hero-buttons{
-    justify-content:center;
-  }
-
-  .hero-right{
-    width:100%;
-    max-width:650px;
-
-    height:auto;
-
-    margin-left:0;
-    margin-top:0;
-  }
-
-  .hero-right img{
-    width:100%;
-    height:auto;
-  }
-
-  /* ===== ABOUT ===== */
-
-  .about{
-    flex-direction:column;
-
-    gap:50px;
-
-    padding:60px 30px;
-  }
-
-  .about-left,
-  .about-right{
-    width:100%;
-  }
-
-  .about-left h2{
-    width:100%;
-
-    font-size:54px;
-    line-height:75px;
-
-    text-align:center;
-  }
-
-  .about-right > p{
-    width:100%;
-    max-width:100%;
-
-    text-align:center;
-  }
-
-  .card{
-    width:100%;
-  }
-
-  .about-arrow,
-  .bottom-arrows{
-    display:none;
-  }
-}
-
-
-/* ================= MOBILE ================= */
-
-@media(max-width:576px){
-
-  .navbar{
-    height:80px;
-    padding:0 20px;
-    position:relative;
-  }
-
-  .logo img{
-    width:110px;
-  }
-
-  .desktop-btn{
-    display:none;
-  }
-
-  .menu-toggle{
-    display:block;
-
-    font-size:24px;
-    color:#111;
-
-    cursor:pointer;
-
-    z-index:10001;
-  }
-
-  /* ===== MOBILE SIDEBAR ===== */
-
-  .nav-links{
-    position:fixed;
-
-    top:0;
-    right:-100%;
-
-    width:280px;
-    height:100vh;
-
-    background:#fff;
-
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-
-    padding:30px 24px;
-
-    gap:34px;
-
-    list-style:none;
-
-    z-index:9999;
-
-    transition:0.4s ease;
-
-    box-shadow:-5px 0 20px rgba(0,0,0,0.08);
-  }
-
-  .nav-links.active{
-    right:0;
-  }
-
-  .nav-links li{
-    width:100%;
-  }
-
-  .nav-links a{
-    display:flex;
-    align-items:center;
-
-    gap:12px;
-
-    font-size:16px;
-    font-weight:500;
-
-    color:#111;
-  }
-
-  .mobile-btn{
-    display:block;
-
-    width:100%;
-    height:50px;
-
-    border:none;
-    border-radius:8px;
-
-    background:#4C5DF4;
-    color:#fff;
-
-    font-size:16px;
-    font-weight:500;
-
-    margin-top:10px;
-  }
-
-  /* ===== HERO MOBILE ===== */
-.hero{
-  flex-direction:column;
-
-  padding:30px 20px 50px;
-
-  gap:34px;
-
-  text-align:center;
-}
-
-.hero-left{
-  width:100%;
-
-  margin-top:0;
-
-  gap:22px;
-
-  align-items:center;
-}
-
-.hero-left h1{
-  font-size:38px;
-
-  line-height:48px;
-
-  font-weight:700;
-
-  letter-spacing:-1px;
-
-  max-width:330px;
-
-  margin:0 auto;
-}
-
-.hero-left p{
-  max-width:310px;
-
-  margin:0 auto;
-
-  font-size:16px;
-
-  line-height:28px;
-
-  text-align:center;
-}
-
-.hero-points{
-  width:100%;
-
-  align-items:center;
-
-  gap:14px;
-}
-
-.hero-points p{
-  width:100%;
-
-  justify-content:flex-start;
-
-  text-align:left;
-
-  max-width:290px;
-
-  font-size:15px;
-
-  line-height:24px;
-
-  margin:0 auto;
-}
-
-.hero-buttons{
-  width:100%;
-
-  flex-direction:column;
-
-  gap:16px;
-
-  margin-top:10px;
-}
-
-.start-btn,
-.consult-btn{
-  width:100%;
-
-  max-width:310px;
-
-  margin:auto;
-
-  height:52px;
-
-  font-size:16px;
-}
-
-.hero-right{
-  width:100%;
-
-  height:auto;
-
-  justify-content:center;
-}
-
-.hero-main-img{
-  width:100%;
-
-  max-width:320px;
-}
-
-.rating-card{
-  right:0;
-  top:90px;
-
-  transform:scale(0.82);
-}
-
-.trusted-card{
-  left:0;
-  bottom:70px;
-
-  transform:scale(0.82);
-}
-
-  /* ===== ABOUT MOBILE ===== */
-
-  .about{
-    flex-direction:column;
-
-    gap:40px;
-
-    padding:50px 20px;
-  }
-
-  .about-left,
-  .about-right{
-    width:100%;
-  }
-
-.about-left h2{
-  width:100%;
-
-  font-size:34px;
-  line-height:48px;
-
-  text-align:center;
-
-  margin-bottom:20px;
-}
-.about-right > p{
-  width:100%;
-
-  font-size:15px;
-  line-height:30px;
-
-  text-align:center;
-  margin-left: 16px;
-  margin-right: 16px;
-  margin-bottom:26px;
-}
-.card{
-  width:100%;
-
-  min-height:unset;
-
-  padding:18px 16px;
-
-  display:flex;
-  align-items:flex-start;
-
-  gap:14px;
-  margin-left: 16px;
-  margin-right: 16px;
-  margin-bottom:18px;
-
-  border-radius:16px;
-
-  background:#FDFDFF;
-
-  border:1px solid #DDE2FF;
-}
-
-.card-icon{
-  width:48px;
-  height:48px;
-  min-width:48px;
-
-  border-radius:12px;
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
-  font-size:20px;
-
-  background:#EEF1FF;
-
-  color:#4C5DF4;
-}
-
-.card-content{
-  flex:1;
-}
-
-.card-content h3{
-  font-size:16px;
-  line-height:22px;
-
-  margin-bottom:6px;
-
-  font-weight:700;
-}
-
-.card-content p{
-  font-size:14px;
-
-  line-height:22px;
-
-  color:#555;
-
-  margin:0;
-}
-.about-right{
-  width:100%;
-}
-
-.about-right > p{
-  width:100%;
-}
-  
-  .chart-image{
-  max-width:100%;
-
-  margin:auto;
-}
-
-  .about-arrow,
-  .bottom-arrows{
-    display:none;
-  }
-  .about-heading{
-  text-align:center;
-}
-}
-@media (min-width: 93px) {
-    .nav-links {
-        transform: translateX(20px);
-    }
-}
-@media (min-width: 993px) {
-    .desktop-btn {
-        position: relative;
-        left: -40px;
-    }
-}
-/* ================= HERO DECORATIVE VECTORS ================= */
-
-.hero-right {
-    position: relative;
-}
-
-/* Vector 2 - Top Right */
-.vector-2 {
-    position: absolute;
-
-    width: 55px;
-    height: auto;
-
-    top: 0;
-    right: 60px;
-
-    z-index: 5;
-}
-
-/* Main Hero Image */
-.hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-/* Vector 1 - Bottom Left */
-.vector-1 {
-    position: absolute;
-
-    width: 100px;
-    height: auto;
-
-    left: -10px;
-    bottom: 0;
-
-    z-index: 5;
-}
-/* ================= HERO VECTORS FIX ================= */
-
-/* Main hero image only */
-.hero-right img.hero-image {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain;
-}
-
-/* Vector 2 - curved arrow - TOP RIGHT */
-.hero-right img.vector-2 {
-    position: absolute !important;
-
-    width: 55px !important;
-    height: auto !important;
-
-    top: 20px !important;
-    right: 70px !important;
-
-    object-fit: contain !important;
-
-    z-index: 10;
-}
-
-/* Vector 1 - chevrons - BOTTOM LEFT */
-.hero-right img.vector-1 {
-    position: absolute !important;
-
-    width: 100px !important;
-    height: auto !important;
-
-    left: -20px !important;
-    bottom: 20px !important;
-
-    object-fit: contain !important;
-
-    z-index: 10;
-}
-.chart-wrapper {
-    position: relative;
-    display: inline-block;
-}
-
-.chart-image {
-    display: block;
-}
-
-.chart-vector {
-    position: absolute;
-
-    width: 100px;
-    height: auto;
-
-    left: -130px;
-    bottom: -20px;
-
-    z-index: 5;
-}
-.chart-wrapper {
-    position: relative;
-    display: inline-block;
-}
-
-.chart-image {
-    display: block;
-}
-
-/* Vector 1 - Bottom Left */
-.chart-vector-1 {
-    position: absolute;
-
-    width: 120px;
-    height: auto;
-
-    left: -100px;
-    bottom: -30px;
-
-    z-index: 5;
-}
-
-/* Vector 2 - Top Right */
-.chart-vector-2 {
-    position: absolute;
-
-    width: 35px;
-    height: auto;
-
-    right: 50px;
-    top: -50px;
-
-    z-index: 5;
-}
-/* ===== CARD SIZE & TEXT GAP FIX ===== */
-
-.card {
-    min-height: 110px;
-    padding: 20px 30px;
-}
-
-.card-content p {
-    line-height: 24px;
-    margin: 0;
-}
-
-.card-content h3 {
-    margin-top: 0;
-    margin-bottom: 6px;
-}
-/* ===== FIX CARDS ===== */
-
-.card {
-    width: 620px;
-    min-height: 110px;
-
-    background: #FDFDFF;
-    border: 1px solid #DDE2FF;
-    border-radius: 16px;
-
-    padding: 20px 28px;
-
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-
-    gap: 18px;
-    margin-bottom: 26px;
-}
-
-.card-icon {
-    width: 52px;
-    height: 52px;
-    min-width: 52px;
-
-    border-radius: 14px;
-    background: #EEF1FF;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-icon img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-}
-
-.card-content {
-    flex: 1;
-    width: auto;
-}
-
-.card-content h3 {
-    margin: 0 0 6px 0;
-
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 700;
-}
-
-.card-content p {
-    margin: 0;
-
-    font-size: 16px;
-    line-height: 24px;
-    color: #555;
-}
+</html>
